@@ -8,6 +8,7 @@
 </head>
 <body>
   <div class="home-page">
+    
     <div class="title-intro">
       <span class="text">HEY, WELCOME</span>
       <span class="text">AM NOT YOUR REGULAR</span>
@@ -37,7 +38,7 @@
       // Check if scrolling down
       if (scrollPosition > previousScrollPosition) {
         // Scroll down, set opacity to 0
-        titleIntro.style.transition = 'opacity 0.5s ease-in-out';
+        titleIntro.style.transition = 'opacity 1.5s ease-in-out';
         titleIntro.style.opacity = 0;
       } else{
         //scroll up, set opacity to 1;
@@ -50,5 +51,17 @@
     });
 </script>
 
+<!-- <script>
+  function update(e){
+    var x = e.clientX || e.touches[0].clientX
+    var y = e.clientY || e.touches[0].clientY
+  
+    document.documentElement.style.setProperty('--cursorX', x + 'px')
+    document.documentElement.style.setProperty('--cursorY', y + 'px')
+  }
+  
+  document.addEventListener('mousemove',update)
+  document.addEventListener('touchmove',update)
+</script> -->
 </body>
 </html>

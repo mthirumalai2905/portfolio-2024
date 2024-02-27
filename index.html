@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thirumalai</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="home-page">
+    <div class="title-intro">
+      <span class="text">HEY, WELCOME</span>
+      <span class="text">AM NOT YOUR REGULAR</span>
+      <span class="text">WEB <span class="developer">DEVELOPER</span></span>
+    </div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div><div>hello</div>
+  </div>
+
+  <script>
+    const titleIntro = document.querySelector('.title-intro');
+    let previousScrollPosition = window.scrollY; // Initialize previous scroll position
+    
+    // Set initial opacity to 0
+    titleIntro.style.opacity = 0;
+    
+    // Transition to opacity 1 over 2 seconds when page loads
+    setTimeout(() => {
+      titleIntro.style.transition = 'opacity 2s ease-out';
+      titleIntro.style.opacity = 1;
+    }, 1000); // Adjust delay as needed
+
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY; // Current scroll position
+
+      // Check if scrolling down
+      if (scrollPosition > previousScrollPosition) {
+        // Scroll down, set opacity to 0
+        titleIntro.style.transition = 'opacity 0.5s ease-in-out';
+        titleIntro.style.opacity = 0;
+      } else{
+        //scroll up, set opacity to 1;
+        titleIntro.style.transition = 'opacity 0.5s ease-in-out';
+        titleIntro.style.opacity = 1;
+      }
+
+      // Update previous scroll position
+      previousScrollPosition = scrollPosition;
+    });
+</script>
+
+</body>
+</html>
